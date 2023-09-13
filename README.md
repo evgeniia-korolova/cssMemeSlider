@@ -1,0 +1,1 @@
+[https://github.com/evgeniia-korolova/cssMemeSlider/cssMemeSlider/index.html](https://github.com/evgeniia-korolova/cssMemeSlider/cssMemeSlider/index.html)
