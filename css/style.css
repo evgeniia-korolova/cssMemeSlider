@@ -1,0 +1,265 @@
+html {
+  font-size: 0.625rem;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #fff;
+}
+
+body {
+  width: 100%;
+  background: rgb(30, 6, 84);
+}
+
+.wrapper {
+  max-width: 60%;
+  height: 100vh;
+  margin: 0 auto; 
+}
+
+header {
+  margin-top: 5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.controls__input {
+  visibility: hidden;
+}
+
+.slides__window {
+  width: 55%;
+  height: 100%;
+  margin: .5rem auto;
+  border: 0.4rem solid var(--white-color);
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.slides__track {
+  width: 500%;
+  height: 100%;
+  display: flex;  
+}
+
+.slide {
+  width: 100%;
+  transition: all 2s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  box-sizing: border-box;
+}
+
+.bottom__block {
+  width: 55%;
+  height: 100%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__phrases__window {
+  width: 55%;
+ overflow: hidden;
+}
+
+.slider__phrases__track {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;  
+}
+
+.slider__text {
+  width: 100%;
+  transition: all 2s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  font-size: 1.7rem;  
+  font-weight: 400;
+  color: var(--white-color);
+  overflow: hidden;
+}
+
+.circle {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls__dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgb(165, 76, 106);
+  border-radius: 50%;
+}
+
+.navigation {
+  width: 40%;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.circle:hover .controls__dot {
+  background: rgb(238, 137, 170);
+  box-shadow: 0 0 0.5rem 0.4rem rgb(238, 182, 200);
+}
+
+#first:checked ~ .slides__window .slides__track,
+#first:checked
+  ~ .bottom__block
+  .slider__phrases__window
+  .slider__phrases__track {
+  transform: translateX(0);
+}
+
+#second:checked ~ .slides__window .slides__track,
+#second:checked
+  ~ .bottom__block
+  .slider__phrases__window
+  .slider__phrases__track {
+  transform: translateX(-20%);
+}
+
+#third:checked ~ .slides__window .slides__track,
+#third:checked
+  ~ .bottom__block
+  .slider__phrases__window
+  .slider__phrases__track {
+  transform: translateX(-40%);
+}
+
+#forth:checked ~ .slides__window .slides__track,
+#forth:checked
+  ~ .bottom__block
+  .slider__phrases__window
+  .slider__phrases__track {
+  transform: translateX(-60%);
+}
+
+#fifth:checked ~ .slides__window .slides__track,
+#fifth:checked
+  ~ .bottom__block
+  .slider__phrases__window
+  .slider__phrases__track {
+  transform: translateX(-80%);
+}
+
+.controls__input:nth-child(1):checked
+  ~ .bottom__block
+  .navigation
+  label:nth-child(1)
+  .controls__dot,
+.controls__input:nth-child(2):checked
+  ~ .bottom__block
+  .navigation
+  label:nth-child(2)
+  .controls__dot,
+.controls__input:nth-child(3):checked
+  ~ .bottom__block
+  .navigation
+  label:nth-child(3)
+  .controls__dot,
+.controls__input:nth-child(4):checked
+  ~ .bottom__block
+  .navigation
+  label:nth-child(4)
+  .controls__dot,
+.controls__input:nth-child(5):checked
+  ~ .bottom__block
+  .navigation
+  label:nth-child(5)
+  .controls__dot {
+  background: rgb(96, 3, 40);
+}
+
+footer {
+ width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  color: var(--white-color);
+  padding-top: 2rem;
+  border-top: 0.1rem solid var(--white-color);
+  font-weight: 200;
+}
+
+footer a:hover { 
+  color: rgb(165, 76, 106);
+}
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .bottom__block {
+    width: 100%;
+    margin: 1rem auto;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider__phrases__window {
+    width: 100%;
+  }
+
+  .slider__text {
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .slider__text {
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+
+  .navigation {
+    gap: .7rem;
+  }
+
+  footer {
+    margin: 0 auto;
+    padding: 0; 
+    padding-top: 0.8rem;  
+  }
+
+  .footer__link,
+  .footer__text {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
