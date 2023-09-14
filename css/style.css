@@ -84,7 +84,13 @@ h1 {
   display: flex;
   justify-content: flex-start;
   align-self: center;
+font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    color: white;
+    overflow: hidden;
 }
+
 
 .circle {
   width: 2.5rem;
@@ -99,7 +105,7 @@ h1 {
 .controls__dot {
   width: 1.8rem;
   height: 1.8rem;
-  background: palevioletred;
+  background: rgb(165, 76, 106);
   border-radius: 50%;
 }
 
@@ -113,15 +119,9 @@ h1 {
 }
 
 .circle:hover .controls__dot {
-    background: var(--color-basic-hover);
-    box-shadow: 0 0 0.5rem 0.4rem rgba(255, 255, 255, 0.5);
+    background: rgb(238, 137, 170);
+    box-shadow: 0 0 0.5rem 0.4rem rgb(238, 182, 200);
 }
-.input:checked + label {
-    background: rgb(3, 3, 60);
-    box-shadow: 0 0 0.5rem 0.4rem rgba(255, 255, 255, 0.5);
-}
-
-
 
 
 #first:checked ~ .slides__window .slides__track,
@@ -161,12 +161,59 @@ h1 {
   background: rgb(96, 3, 40);
 }
 
+@media screen and (max-width: 1000px) {
+  .circle {
+  width: 2rem;
+  height: 2rem; 
+}
+.controls__dot {
+  width: 1.5rem;
+  height: 1.5rem; 
+}
+ .slider__text {
+  font-size: 1.8rem;
+}
 
+@media screen  and (max-width: 900px){
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .slider__text {
+  font-size: 1.6rem;
+ 
+}
+}
+
+@media screen and (max-width: 700px) {
+   h1 {
+    font-size: 2.2rem;
+  }
+  
+  .bottom__block {
+  max-width: 60%;
+  margin: 1rem auto;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .slider__text {
-    font-size: 2rem;
-    font-style: italic;
-    font-weight: 600;
-    color: white;
-    overflow: hidden;
+  font-size: 1.5rem;
+  justify-content: center;
+ text-align: center;
 }
+}
+
+@media screen  and (max-width: 501px){
+  h1 {
+    font-size: 2.1rem;
+  }
+  
+  .slider__text {
+  font-size: 1.5rem;
+  font-weight: 400;
+ 
+}
+}
+
