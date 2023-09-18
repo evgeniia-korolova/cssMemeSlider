@@ -44,7 +44,7 @@ h1 {
   width: 500%;
   height: 100%;  
   display: flex;  
-  transition: all 2s ease-in-out;
+  /* transition: all 2s ease-in-out; */
 }
 
 .slide {
@@ -80,7 +80,7 @@ h1 {
   height: 100%;
   display: flex;  
   align-items: flex-start;  
-  transition: all 2s ease-in-out;
+  /* transition: all 2s ease-in-out; */
 }
 
 .slider__text {
@@ -125,31 +125,41 @@ h1 {
   box-shadow: 0 0 0.5rem 0.4rem rgb(238, 182, 200);
 }
 
+.circle:active .controls__dot {    
+  background: rgb(43, 18, 26);
+  /* box-shadow: 0 0 0.5rem 0.4rem rgb(238, 182, 200); */
+}
+
 #first:checked ~ .slides__window .slides__track,
 #first:checked ~ .bottom__block .slider__phrases__window .slider__phrases__track   {
    
   transform: translateX(0);
+  transition: all 2s ease-in-out;
 }
 
 #second:checked ~ .slides__window .slides__track,
 #second:checked ~ .bottom__block .slider__phrases__window .slider__phrases__track   {
    
   transform: translateX(-20%);
+  transition: all 2s ease-in-out;
 }
 #third:checked ~ .slides__window .slides__track,
 #third:checked ~ .bottom__block .slider__phrases__window .slider__phrases__track   {
    
   transform: translateX(-40%);
+  transition: all 2s ease-in-out;
 }
 #forth:checked ~ .slides__window .slides__track,
 #forth:checked ~ .bottom__block .slider__phrases__window .slider__phrases__track   {
    
   transform: translateX(-60%);
+  transition: all 2s ease-in-out;
 }
 #fifth:checked ~ .slides__window .slides__track,
 #fifth:checked ~ .bottom__block .slider__phrases__window .slider__phrases__track   {
    
   transform: translateX(-80%);
+  transition: all 2s ease-in-out;
 }
 
 
@@ -159,6 +169,7 @@ h1 {
 .controls__input:nth-child(4):checked ~ .bottom__block .navigation label:nth-child(4) .controls__dot, 
 .controls__input:nth-child(5):checked ~ .bottom__block .navigation label:nth-child(5) .controls__dot  {
   background: rgb(96, 3, 40);
+  transition: all 2s ease-in-out;
 }
 
 footer {
